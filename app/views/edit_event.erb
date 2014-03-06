@@ -1,6 +1,5 @@
 <div class="container">
-  <form id="event" method="POST" action="/event/<%= @event.id %>/edit">
-    
+  <form method="POST" action="/event/<%= @event.id %>/edit">  
     <input type="hidden" name="event[user_id]" value="<%= @user.id%>">
       
       Event Name: <input type="text" name="event[name]" value="<%= @event.name%>" ><br>

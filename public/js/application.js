@@ -7,8 +7,27 @@ $(document).ready(function(){
         console.log(String(data));
         $( "#event_form" ).html( data );
     });
-  
+    
   });
+
+  $("#event").on("submit", function(event){
+    event.preventDefault();
+
+    data = { 
+      "event": {
+        "user_id": $("#user_id").val(), 
+        "name": $("#name").val(),
+        "location": $("#location").val(),
+        "starts_at": $("#starts_at").val(),
+        "ends_at": $("#ends_at").val() }
+    }
+
+    $.post("/event/new", data, function(response){
+      console.log("next: appending to this page");
+      location.reload(true);
+    })
+
+  })
 
   // $("#ajaxified_form").on("submit", function(event){
   //   event.preventDefault();

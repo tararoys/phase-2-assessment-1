@@ -4,7 +4,7 @@ get '/event/new' do
 end
 
 post "/event/new" do
-  params[:event].inspect
+  puts params
   params[:event][:starts_at] = Time.now + (rand(61) - 30).days
   params[:event][:ends_at] = Time.now + (rand(61) - 30).days
 
