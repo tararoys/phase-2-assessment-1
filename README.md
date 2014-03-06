@@ -1,4 +1,5 @@
 # Events Management Application
+
 By now you should be familiar with basic sinatra apps and creating simple websites.  This problem will give you a chance to demonstrate your proficiency with the web by writing code for controllers, authentication, views, and basic HTML forms with a little bit of CSS. We're going full [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) and building a simple event-management application.
 
 The problem is broken into 4 parts.  You will need to complete each part to move on. We've given approximate timing for each part.  If you find you are taking a lot longer be sure to ask questions.
@@ -45,6 +46,7 @@ The `User` model should have two associations on it:
 To be clear, ```created_events``` and ```attended_events``` should return completely different results (we are not asking you to create an alias).
 
 To help you along your way, we recommend reviewing the ActiveRecord documentation, specifically the available options for the association methods you'll be using.
+
 
 ### Part 3: CRUD It Up (Timing ~ 45 min)
 
