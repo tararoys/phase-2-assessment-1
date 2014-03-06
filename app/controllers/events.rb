@@ -13,3 +13,13 @@ post "/event/new" do
 end
 
 
+get "/event/:id/edit" do
+  @user = User.find(session[:id])
+  @event = Event.find(params[:id])
+  erb :edit_event
+end
+
+post '/event/:id/edit' do
+  event = Event.update(params[:id], params[:event])
+  redirect '/'
+end
