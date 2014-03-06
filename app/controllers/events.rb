@@ -23,3 +23,9 @@ post '/event/:id/edit' do
   event = Event.update(params[:id], params[:event])
   redirect '/'
 end
+
+get "/event/:id/delete" do
+  event = Event.find(params[:id])
+  Event.delete(event.id)
+  redirect "/"
+end
