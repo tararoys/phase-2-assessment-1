@@ -1,0 +1,12 @@
+<div class="container">
+  <form id="event" method="POST" action="/event/new">
+    <input type="hidden" name="event[user_id]" value="<%= @user.id%>">
+      
+      Event Name: <input type="text" name="event[name]"><br>
+      Location: <input type="text" name="event[location]"><br>
+      Starts At: <input type="text" name="event[starts_at]"><br>
+      Ends At: <input type="text" name="event[ends_at]"><br>
+
+    <input type="submit" value="create event!">
+  </form>
+</div>

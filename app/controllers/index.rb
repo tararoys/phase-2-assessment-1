@@ -4,3 +4,4 @@ get '/' do
   @events = @user.created_events if session[:id]
   erb :index
 end
+
