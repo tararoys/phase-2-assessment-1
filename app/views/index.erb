@@ -4,7 +4,8 @@
 
 
     <%if session[:id] %>
-      <a href="/event/new"> <b> create new event</b></a>
+      <a id="new_event" href="/event/new"> <b> create new event</b></a>
+      <div id="event_form"> </div>
       <ul>
 
         <% @events.each do |event| %>
